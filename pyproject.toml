@@ -21,7 +21,7 @@ dev = [
 ]
 
 [tool.setuptools]
-package-dir = {"" = "AutoPlumber"}
+package-dir = {"" = "autoplumber"}
 
 [tool.setuptools.packages.find]
-where = ["AutoPlumber"]
+where = ["autoplumber"]
