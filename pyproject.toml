@@ -1,0 +1,27 @@
+[build-system]
+requires=["setuptools>=80.9.0"]
+build-backend= "setuptools.build_meta"
+
+[project]
+name = "autoplumber"
+version = "0.1.0"
+description = "AutoPlumber: Automated Data Preprocessing for Machine Learning"
+authors = [{name="Kirisame-ame"}]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.3.1",
+    "pandas>=2.3.0",
+    "scikit-learn>=1.7.0",
+]
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "flake8",
+]
+
+[tool.setuptools]
+package-dir = {"" = "AutoPlumber"}
+
+[tool.setuptools.packages.find]
+where = ["AutoPlumber"]
