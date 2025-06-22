@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "AutoPlumber: Automated Data Preprocessing for Machine Learning"
 authors = [{name="Kirisame-ame"}]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.9"
 dependencies = [
     "numpy>=2.3.1",
     "pandas>=2.3.0",
