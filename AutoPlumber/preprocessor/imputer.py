@@ -42,6 +42,7 @@ class Imputer:
         if self.fill_value is None:
             raise ValueError("Imputer has not been fitted yet. Call fit() before transform().")
         return X.fillna(self.fill_value)
+    
     def fit_transform(self, X:pd.Series) -> pd.Series:
         """
         Fits the imputer to the data and transforms it.

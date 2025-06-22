@@ -14,9 +14,10 @@ class ZScoreOutlierRemover:
     def transform(self, X:pd.Series)-> pd.Series:
         """Transform the data by removing outliers or capping them."""
         if self.capped:
-            X = X.clip(lower=self.lower_bound, upper=self.upper_bound)
+            return X.clip(lower=self.lower_bound, upper=self.upper_bound)
         else:
-            X = X[(X >= self.lower_bound) & (X <= self.upper_bound)]
+            return X[(X >= self.lower_bound) & (X <= self.upper_bound)]
+    
     def fit_transform(self, X) -> pd.Series:
         """Fit the model and transform the data."""
         self.fit(X)
@@ -38,9 +39,9 @@ class IQROutlierRemover:
     def transform(self, X:pd.Series) -> pd.Series:
         """Transform the data by removing outliers or capping them."""
         if self.capped:
-            X = X.clip(lower=self.lower_bound, upper=self.upper_bound)
+            return X.clip(lower=self.lower_bound, upper=self.upper_bound)
         else:
-            X = X[(X >= self.lower_bound) & (X <= self.upper_bound)]
+            return X[(X >= self.lower_bound) & (X <= self.upper_bound)]
 
     def fit_transform(self, X:pd.Series) -> pd.Series:
         """Fit the model and transform the data."""
