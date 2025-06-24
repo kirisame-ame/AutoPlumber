@@ -46,6 +46,7 @@ class Imputer:
     def fit_transform(self, X:pd.Series) -> pd.Series:
         """
         Fits the imputer to the data and transforms it.
+        
         :param X: The input data.
         :return: The transformed data with missing values imputed.
         """
